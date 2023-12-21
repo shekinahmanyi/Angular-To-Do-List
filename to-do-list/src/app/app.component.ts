@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';  
+import { TaskViewComponent } from './pages/task-view/task-view.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterModule, TaskViewComponent], 
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],  
 })
 export class AppComponent {
   title = 'to-do-list';
