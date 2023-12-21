@@ -11,8 +11,6 @@ mongoose.connect('mongodb://localhost:27017/TaskManager', { useNewUrlParser: tru
     console.log(e);
 });
 
-mongoose.set('useCreateIndex', true);
-mongoose.set('useFindAndModify', false);
 
 module.exports = {
     mongoose
