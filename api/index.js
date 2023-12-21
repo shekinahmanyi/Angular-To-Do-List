@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();  
 
+//Load in the mongoose models
+const { List, Task } = require('./db/models');
+const { mongoose } = require('./db/mongoose');
+
 /* Route Handlers*/
 
 /* List Routes*/
@@ -8,13 +12,16 @@ const app = express();
 /* Get Lists*/
 app.get('/lists', (req, res) => {  
 //Return an array of lists
-    res.send('Hello World');
+   List.find({}).then((lists) => {
+       res.send(lists);
+   });
 })
 
 /* Post List*/
 app.post('/lists', (req, res) => {
     //create new list and return the new list document back to the user (which includes the id)
     //the list information (fields) will be passed in via the JSON request body
+    let title = req.body.title;
 })
 
 /* Patch List*/
