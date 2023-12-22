@@ -1,18 +1,16 @@
-//Handle Connection Logic to MongoDB Database
+const mongoose = require("mongoose");
 
-const mongoose = require('mongoose');
+// Encode the password
+const password = encodeURIComponent("aHwXfY9h48TwrGm6");
 
-
+// Use the encoded password in the connection string
 mongoose
   .connect(
-    "mongodb://localhost:27017/TaskManagerDB",
+    `mongodb+srv://shekinahmanyi:${password}@cluster0.6amgtor.mongodb.net/`
   )
-  .then(() => app.listen(5000))
-  .then(() =>
-    console.log("Connected Successfully to Database and listening on port 5000")
-  )
+  .then(() => console.log("Connected Successfully to Database"))
   .catch((err) => console.log(err));
 
 module.exports = {
-    mongoose
+  mongoose,
 };
