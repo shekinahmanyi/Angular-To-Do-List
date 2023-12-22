@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 mongoose
   .connect(
-    "mongodb://localhost:27017",
+    "mongodb://localhost:27017/TaskManagerDB",
   )
   .then(() => app.listen(5000))
   .then(() =>
