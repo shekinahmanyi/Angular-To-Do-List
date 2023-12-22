@@ -3,14 +3,15 @@
 const mongoose = require('mongoose');
 
 
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/TaskManager', { useNewUrlParser: true }).then(() => {
-    console.log("Connected to MongoDB successfully :)");
-}).catch((e) => {
-    console.log("Error while attempting to connect to MongoDB");
-    console.log(e);
-});
-
+mongoose
+  .connect(
+    "mongodb://localhost:27017",
+  )
+  .then(() => app.listen(5000))
+  .then(() =>
+    console.log("Connected Successfully to Database and listening on port 5000")
+  )
+  .catch((err) => console.log(err));
 
 module.exports = {
     mongoose
