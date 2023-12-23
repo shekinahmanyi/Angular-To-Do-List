@@ -12,7 +12,7 @@ export class TaskService {
   createList(title:string) {
     
     //we want to send a web request to create a new list 
-    this.WebRequestService.post('lists',{title})
+    return this.WebRequestService.post('lists',{title})
 
    }
 }
