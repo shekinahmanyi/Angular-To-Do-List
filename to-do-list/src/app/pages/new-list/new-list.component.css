@@ -1,0 +1,26 @@
+.buttons{
+   text-align: center;
+  margin-top: 5px;
+  color: white;
+  text-decoration: none;
+  font-family: "Lato";
+}
+
+.button-create{
+    padding:15px;
+    margin-right: 25px;
+    background-color: rgb(92, 92, 248);
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;   
+    border: 2px solid rgb(92, 92, 248);
+}
+
+.button-cancel{
+      padding:15px;
+    background-color: rgb(228, 69, 69);
+    color: white;
+    border-radius: 5px;   
+    text-decoration: none;
+    border: 2px solid rgb(231, 90, 90)
+}
