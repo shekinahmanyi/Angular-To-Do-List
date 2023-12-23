@@ -7,6 +7,16 @@ const { List, Task } = require("./db/models");
 //Load middleware
 app.use(express.json());
 
+
+ app.use(function(req,res,next ) {
+
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,Accept, x-access-token");
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+  next();
+
+ });
+
 /* Get Lists*/
 app.get("/lists", (req, res) => {
   //Return an array of lists
