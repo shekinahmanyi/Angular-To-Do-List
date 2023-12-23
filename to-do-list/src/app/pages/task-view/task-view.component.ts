@@ -1,6 +1,7 @@
 import { TaskService } from './../../task.service';
 import { Component } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,17 +14,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 export class TaskViewComponent {
 
-  constructor(private TaskService: TaskService) {}
+  constructor(private router:Router) {}
 
   ngOnInit() {
 
   }
-
-  createNewList() {
-    this.TaskService.createList('Testing New List').subscribe((response: any) => {
-      console.log(response);
-    });
- 
+  onNewListClick() {
+    this.router.navigate(['/new-list']);
   }
 
 }
