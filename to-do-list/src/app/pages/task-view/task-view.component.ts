@@ -7,6 +7,17 @@ import { Component } from '@angular/core';
   templateUrl: './task-view.component.html',
   styleUrl: './task-view.component.css'
 })
+
 export class TaskViewComponent {
+
+  constructor() {}
+
+  ngOnInit() {
+
+  }
+
+  createNewList(title: string) {
+ 
+  }
 
 }
