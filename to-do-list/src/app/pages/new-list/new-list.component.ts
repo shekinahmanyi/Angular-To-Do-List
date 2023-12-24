@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TaskService } from '../../task.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-list',
@@ -11,15 +12,21 @@ import { TaskService } from '../../task.service';
 
 
 export class NewListComponent {
-  constructor (private taskService:TaskService) {}
+  constructor (private router:Router, private taskService:TaskService) {}
+  
   ngOnInit() {
 
   }
-  createNewList() {
-    this.taskService.createList('Testing New List').subscribe((response: any) => {
+  onCancelListClick() {
+    this.router.navigate(['/']);
+  }
+
+  createList(title: string) {
+    this.taskService.createList(title).subscribe((response: any) => {
       console.log(response);
     });
  
   }
+  
 
 }
