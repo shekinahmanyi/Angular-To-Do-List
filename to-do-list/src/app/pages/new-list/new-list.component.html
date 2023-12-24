@@ -4,14 +4,14 @@
             Create a new list
           </h1>
 
-        <input class="input is-primary" type="text" placeholder="Primary input" style="width: 80%;
+        <input #listTitleInput class="input is-primary" type="text" placeholder="Enter List Name" style="width: 80%;
         border: 2px solid #4b77f1; padding: 15px; border-radius: 5px;">
     
         
           <br><br>
           <div class="buttons">
-            <button class="button-create">Create</button>
-            <button class="button-cancel" routerLink="/">Cancel</button>
+            <button class="button-create" (click)="createList(listTitleInput.value)">Create</button>
+            <button class="button-cancel" (click)="onCancelListClick()">Cancel</button>
           </div>
     </div>
 </div>
