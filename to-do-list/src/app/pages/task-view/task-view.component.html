@@ -11,15 +11,8 @@
           <p>List #1</p>
         </a>
 
-        <a class="list-menu-item">
-          <p>List #2</p>
-        </a>
-
-        <a class="list-menu-item">
-          <p>List #3</p>
-        </a>
-        <a class="list-menu-item">
-          <p>List #4</p>
+        <a class="list-menu-item" *ngFor="let list of lists" (click)="onListId(list)" routerLinkActive="is-active">
+          <p>{{ list.title }}</p>
         </a>
 
       </div>
@@ -34,12 +27,11 @@
 
       <!--Task Elements-->
 
-      <div class="task">
-
-        <div class="task-text">
-            <p>This is a Task</p>
-          </div>
+      <div class="task" *ngFor="let task of tasks">
         
+        <div class="task-text">
+          <p>{{ task.title }}</p>
+        </div>
       </div>
 
     </div>
