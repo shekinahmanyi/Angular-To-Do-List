@@ -15,4 +15,8 @@ export class TaskService {
     return this.WebRequestService.post('lists',{title})
 
    }
+
+   getLists() {
+      return this.WebRequestService.get('lists');
+   }
 }
