@@ -1,15 +1,19 @@
 
 Full-Stack To-Do List Application
 ##
-This full-stack To-Do List application is built using Node.js, Angular, and [Your Database Choice]. 
+This full-stack To-Do List application is built using Node.js, Angular, and MongoDB. 
 It enables users to efficiently manage their tasks by providing features such as task addition, editing, and deletion.
 The implementation of this application serves as a demonstration of full-stack development skills, incorporating best practices throughout.
 
 ##
-Technologies Used
+Technologies Used:
+##
 Frontend: Angular
+##
 Backend: Node.js
+##
 Database: MongoDB
+##
 Communication: RESTful API
 
 ##
